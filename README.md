@@ -56,9 +56,15 @@ Telegram-бот для автоматизації продажу та облік
    ```
    Вкажіть ваш `BOT_TOKEN`, отриманий від [@BotFather](https://t.me/BotFather).
 
-4. **Запустіть бота:**
+4. **Запустіть бота локально:**
    ```bash
    python main.py
+   ```
+
+5. **Запуск через Docker Compose (Production):**
+   ```bash
+   docker compose up --build -d
+   docker compose logs -f
    ```
 
 ---

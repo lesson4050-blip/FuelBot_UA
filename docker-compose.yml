@@ -1,0 +1,20 @@
+version: "3.8"
+
+services:
+  fuelbot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: fuelbot_ua
+    restart: unless-stopped
+    env_file:
+      - .env.example
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - .:/app
+      - fuel_data:/app/data
+    command: ["python", "main.py"]
+
+volumes:
+  fuel_data:
